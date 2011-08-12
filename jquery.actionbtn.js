@@ -7,11 +7,12 @@
 */
 
 /**
-* Requirements: jQuery 1.5 or above 
-*
-* Usage:
-* $(target).actionbtn()
-*/
+ *  Requirements: jQuery 1.5 or above 
+ *
+ *  Usage:
+ *  $(target).actionbtn()
+ * 
+ */
 
 (function($) {
 	/**
