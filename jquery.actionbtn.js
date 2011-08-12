@@ -1,25 +1,30 @@
 /**
 * Three State Buttons
 *
-* Copyright (c) 2011 Lakshan Perera (laktek.com)
+* Copyright (c) 2011 Nuwan Sameera (bezago.com)
 * Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) licenses.
 *
 */
+
+/**
+ *  Requirements: jQuery 1.5 or above 
+ *
+ *  Usage:
+ *  $(target).actionbtn()
+ * 
+ */
 
 (function($) {
 	/**
 	 * This plugin is used to create activ button effect
 		*/	
-		$.fn.actionbutton = function(options){
-			//build main options before element iteration
-			var opts = $.extend({}, $.fn.actionbutton.defaults, options);
-			
-			  //iterate and reformat each matched element
+		$.fn.actionbtn = function(options){
+			//iterate and reformat each matched element
 			return this.each(function() {
 				var $this = $(this);
         //get the variables of query
-				var hover   = $this.attr('data-hover');
-				var active  = $this.attr('data-active');
+				var hover   = $this.data('hover');
+				var active  = $this.data('active');
         var normal  = $this.attr('src');
         var bid     = $this.attr('id');
         //preload the images
@@ -49,6 +54,7 @@
 			 });
 		};
 
+    //preloading images
 		var image = new Array;
 
     function preloadImages(hover,active,bid) {
@@ -60,10 +66,4 @@
             image[bid+'active'].src = active;
 	  }
 
-		
-		// plugin defaults
-		$.fn.actionbutton.defaults = {
-				hover: '',
-        active: ''
-		};
 })(jQuery);
