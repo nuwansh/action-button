@@ -21,7 +21,7 @@ $(function(){
   $('.action').actionbtn();
 });
 
-Image class (class="action") attribute used to add button functionality to the button  
+//class name of the image tag (class="action") used to add three state functionality to the button  
 ``` 
 
 
